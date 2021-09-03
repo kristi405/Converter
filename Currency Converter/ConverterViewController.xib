@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ConverterViewController" customModule="Currency_Converter" customModuleProvider="target">
+            <connections>
+                <outlet property="converterPicker" destination="z4E-gU-rwy" id="7Rq-w4-jts"/>
+                <outlet property="ratePicker" destination="Cfe-As-tqR" id="N35-ya-xwv"/>
+                <outlet property="resultLabel" destination="ipn-B0-Jeb" id="N5t-rc-JoG"/>
+                <outlet property="sumTextField" destination="xY6-39-fEn" id="mbJ-Cg-8LG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfe-As-tqR">
+                    <rect key="frame" x="0.0" y="84" width="414" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="Mwj-Ou-m1x"/>
+                    </constraints>
+                </pickerView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите валюту для перевода" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOi-aH-SWx">
+                    <rect key="frame" x="51.5" y="44" width="311" height="20"/>
+                    <fontDescription key="fontDescription" name="HoeflerText-BlackItalic" family="Hoefler Text" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z4E-gU-rwy">
+                    <rect key="frame" x="0.0" y="358" width="414" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="Iws-bE-Rmj"/>
+                    </constraints>
+                </pickerView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выберите валюту конвертации" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Szz-In-kRy">
+                    <rect key="frame" x="49" y="318" width="316" height="20"/>
+                    <fontDescription key="fontDescription" name="HoeflerText-BlackItalic" family="Hoefler Text" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Результат" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipn-B0-Jeb">
+                    <rect key="frame" x="152" y="538" width="110.5" height="20"/>
+                    <fontDescription key="fontDescription" name="HoeflerText-BlackItalic" family="Hoefler Text" pointSize="20"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Укажите сумму для конверсии" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xY6-39-fEn">
+                    <rect key="frame" x="30" y="244" width="354" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.3066218866" green="0.0" blue="0.071730324210000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Cfe-As-tqR" firstAttribute="top" secondItem="fOi-aH-SWx" secondAttribute="bottom" constant="20" id="G6v-rw-dnU"/>
+                <constraint firstItem="z4E-gU-rwy" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Jz1-D7-O32"/>
+                <constraint firstItem="z4E-gU-rwy" firstAttribute="top" secondItem="Szz-In-kRy" secondAttribute="bottom" constant="20" id="L08-X7-Lyq"/>
+                <constraint firstItem="fOi-aH-SWx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="MDR-fk-JLV"/>
+                <constraint firstItem="Cfe-As-tqR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="PG5-Ob-96k"/>
+                <constraint firstItem="ipn-B0-Jeb" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="QRT-NO-AOJ"/>
+                <constraint firstItem="xY6-39-fEn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="XME-wc-HIb"/>
+                <constraint firstItem="Cfe-As-tqR" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="bga-eJ-TYJ"/>
+                <constraint firstItem="Szz-In-kRy" firstAttribute="top" secondItem="xY6-39-fEn" secondAttribute="bottom" constant="40" id="eud-9Q-Md9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xY6-39-fEn" secondAttribute="trailing" constant="30" id="h7r-Gq-3lr"/>
+                <constraint firstItem="Szz-In-kRy" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hoO-Ae-dNB"/>
+                <constraint firstItem="xY6-39-fEn" firstAttribute="top" secondItem="Cfe-As-tqR" secondAttribute="bottom" constant="10" id="ru7-Xw-XCr"/>
+                <constraint firstItem="z4E-gU-rwy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vNS-Oz-xBD"/>
+                <constraint firstItem="ipn-B0-Jeb" firstAttribute="top" secondItem="z4E-gU-rwy" secondAttribute="bottom" constant="30" id="vtU-wt-vcB"/>
+                <constraint firstItem="fOi-aH-SWx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="xC2-ya-gsC"/>
+            </constraints>
+            <point key="canvasLocation" x="283" y="8"/>
+        </view>
+    </objects>
+</document>
