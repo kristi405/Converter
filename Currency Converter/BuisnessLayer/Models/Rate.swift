@@ -2,7 +2,7 @@ import Foundation
 
 struct Rate: Codable {
     let curID: Int
-    let date: DateEnum
+    let date: String
     let curAbbreviation: String
     let curScale: Int
     let curName: String
@@ -17,7 +17,7 @@ struct Rate: Codable {
         case curOfficialRate = "Cur_OfficialRate"
     }
     
-    init(curID: Int, date: DateEnum, curAbbreviation: String, curScale: Int, curName: String, curOfficialRate: Double) {
+    init(curID: Int, date: String, curAbbreviation: String, curScale: Int, curName: String, curOfficialRate: Double) {
         self.curID = curID
         self.date = date
         self.curAbbreviation = curAbbreviation
@@ -25,10 +25,6 @@ struct Rate: Codable {
         self.curName = curName
         self.curOfficialRate = curOfficialRate
     }
-}
-
-enum DateEnum: String, Codable {
-    case the20210903T000000 = "2021-09-03T00:00:00"
 }
 
 

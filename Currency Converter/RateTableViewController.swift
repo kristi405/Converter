@@ -1,8 +1,11 @@
 import UIKit
 
 class RateTableViewController: UITableViewController {
-        
-    var rate = [Rate]()
+    // MARK: Propirties
+    
+    var rates = [Rate]()
+    
+    // MARK: LifeCycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -10,24 +13,22 @@ class RateTableViewController: UITableViewController {
         tableView.register(UINib(resource: R.nib.rateCell), forCellReuseIdentifier: R.reuseIdentifier.rateCell.identifier)
         tableView.backgroundColor = R.color.background()
         navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.barStyle = .default
         navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        title = "Курсы валют"
+        title = Constants.currency
     }
 
-    // MARK: - Table view data source
+    // MARK: - TableView data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rate.count
+        rates.count
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.rateCell.identifier, for: indexPath) as? RateCell
         var rateCell = RateCell()
         
         if let rCell = cell {
-            let rate = rate[indexPath.row]
+            let rate = rates[indexPath.row]
             rCell.configureCell(rate: rate)
             rateCell = rCell
         }
@@ -35,6 +36,15 @@ class RateTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        Constants.heightOfTableViewCell
+    }
+}
+
+// MARK: Extension
+
+extension RateTableViewController {
+    enum Constants {
+        static let currency = "Курсы валют"
+        static let heightOfTableViewCell: CGFloat = 60
     }
 }
