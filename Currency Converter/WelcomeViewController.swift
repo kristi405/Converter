@@ -40,17 +40,20 @@ class WelcomeViewController: UIViewController {
         
         isHidden()
         activityIndicator.startAnimating()
-        NetworkManeger.shered.getRate(date: dateFormat()) { rate in
-            self.rate = rate
-            DispatchQueue.main.async {
-                self.activityIndicator.stopAnimating()
-                self.activityIndicator.isHidden = true
-                self.loadLabel.isHidden = true
-                self.notHidden()
-            }
-        }
+        NetworkManeger.shared.getRate(date: dateFormat(), completion: getRate)
         buttonrate.customButton(button: buttonrate)
         buttonCurrency.customButton(button: buttonCurrency)
+        print("11111")
+    }
+    
+    private func getRate(rate: [Rate]) {
+        self.rate = rate
+        DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.isHidden = true
+            self.loadLabel.isHidden = true
+            self.notHidden()
+        }
     }
     
     // MARK: Private methods

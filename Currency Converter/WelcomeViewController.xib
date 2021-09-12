@@ -87,7 +87,7 @@
                 <constraint firstItem="G3f-gD-Xmg" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="pNg-Ir-dc8"/>
                 <constraint firstItem="EoD-Iq-fAU" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="vEa-FZ-OeG"/>
             </constraints>
-            <point key="canvasLocation" x="-109" y="17"/>
+            <point key="canvasLocation" x="384" y="-418"/>
         </view>
     </objects>
 </document>
