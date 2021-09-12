@@ -2,7 +2,7 @@ import Foundation
 
 class NetworkManeger {
     
-    static let shered = NetworkManeger()
+    static let shared = NetworkManeger()
     
     private init() {}
     
